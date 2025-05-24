@@ -1,68 +1,30 @@
 # 🧠 Income Prediction Using Census Data
 
 Welcome to the **Income Prediction ML Project Assignment**!  
-In this project, you will build a machine learning model to predict whether a person earns more than $50K per year using demographic and work-related attributes.
+
+This is a web application that predicts whether a person earns more or less than $50K annually based on features like age, education, capital gain/loss, and marital status. The application uses a trained machine learning model and offers both a Flask-based web interface and a Streamlit interface for interaction.
 
 ---
 
-## 🎯 Objective
+🧠 Model Description:
+Model: A classification model (likely Logistic Regression, Random Forest, etc.) stored as classification_model.pkl
 
-Your task is to:
+Scaler: StandardScaler or similar object saved as scaler.pkl
 
-- Perform **Exploratory Data Analysis (EDA)** on the "Adult Census Income" dataset.
-- **Preprocess the data** to make it suitable for machine learning.
-- Build and evaluate a **classification model** to predict income (`>50K` or `<=50K`).
-- Deploy the model using both:
-  - A **Flask web application**
-  - A **Streamlit app**
----
+Target: Predict if income is >50K or <=50K
 
-## 📦 Dataset Information
+🛠 Features:
+* Categorical to numerical feature mapping
 
-- **Dataset Name:** Adult Census Income
-- **Source:** [OpenML](https://www.openml.org/d/1590)
-- **Load using:**  
-  ```python
-  from sklearn.datasets import fetch_openml
-  data = fetch_openml("adult", version=2, as_frame=True)
-  ````
+* Log-transform on age
 
-* **Target column:** `income`
-* **Task type:** Binary Classification (`>50K` or `<=50K`)
+* Standardization on selected numeric columns
 
----
+* Manual mapping for education and sex
 
-## 📝 Assignment Instructions
+Two user interfaces:
+   *Flask Web Interface
+   *Streamlit UI
 
-1. **Fork this repository** to your GitHub account.
-2. Perform **EDA** and **data preprocessing** in a Jupyter Notebook.
-3. Build a **classification model**, evaluate its performance (accuracy, precision, recall, etc.).
-4. **Save the trained model** using `pickle` or `joblib`.
-5. Create a **Flask web app** that takes user input and displays the predicted income category.
-6. Create a **Streamlit app** with the same functionality but using Streamlit widgets.
-7. Update the `README.md` with:
 
-   * Your project overview
-   * Methodology
-   * Live app links (Streamlit if possible)
-   * Screenshots, etc.
-9. Push all your files to your forked GitHub repo and **submit the GitHub repo link**.
 
----
-
-## 📂 Folder Structure
-
-```
-income-predictor/
-├── flask_app.py                # Flask app entry point
-├── streamlit_app.py            # Streamlit app entry point
-├── model/
-│   └── model.pkl               # Trained and serialized model files
-├── templates/
-│   └── index.html              # HTML template for Flask form
-├── static/                     # (Optional) Static files for Flask
-├── notebook/
-│   └── eda\_model.ipynb        # notebooks
-├── requirements.txt            # List of Python dependencies
-└── README.md                   # Updated with your project details
-```
