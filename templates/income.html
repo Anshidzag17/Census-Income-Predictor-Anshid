@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income level Prediction</title>
+</head>
+<body>
+    <h1>INCOME PREDICTION</h1>
+    <form action="{{ url_for('index') }}" method="post">
+    Age: <input type="number" name="age" placeholder="Enter Your Age" required><br><br>
+    Education:
+    <select name="education" required>
+        <option>Preschool</option>
+        <option>1st-4th</option>
+        <option>5th-6th</option>
+        <option>7th-8th</option>
+        <option>9th</option>
+        <option>10th</option>
+        <option>11th</option>
+        <option>12th</option>
+        <option>HS-grad</option>
+        <option>Some-college</option>
+        <option>Assoc-voc</option>
+        <option>Assoc-acdm</option>
+        <option>Bachelors</option>
+        <option>Masters</option>
+        <option>Prof-school</option>
+        <option>Doctorate</option>
+    </select><br><br>
+    Sex:
+    <select name="sex" required>
+        <option>Male</option>
+        <option>Female</option>
+    </select><br><br>
+    Capital-gain:
+    <input type="number" name="capital-gain" placeholder="Enter Here" required><br><br>
+    Capital-loss:
+    <input type="number" name="capital-loss" placeholder="Enter Here" required><br><br>
+    Hours-per-week:
+    <input type="number" name="hours-per-week" placeholder="Enter Here" required><br><br>
+    Are You Married:
+    <select name="marital_Never-married" required>
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+    </select><br><br>
+    Do you have an occupation:
+    <select name="occupation_Exec-managerial" required>
+        <option value="0">No</option>
+        <option values="1">Yes</option>
+    </select><br><br>
+    <input type="submit" value="Predict">                  
+    </form>
+                                                                                                                                                             
+    {% if prediction %}
+         <div class="result">{{ prediction }}</div>
+    {% endif %}
+</body>
+</html>    
