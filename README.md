@@ -24,9 +24,9 @@ Target: Predict if income is >50K or <=50K
 
 Two user interfaces:
 
- *Flask Web Interface
+ * Flask Web Interface
    
- *Streamlit UI
+ * Streamlit UI
 
 
    
