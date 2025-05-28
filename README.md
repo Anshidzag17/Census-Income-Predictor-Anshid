@@ -13,8 +13,9 @@ Scaler: StandardScaler or similar object saved as scaler.pkl
 
 Target: Predict  income 
 
-📦 Dataset Information
+---
 
+📦 Dataset Information
 Dataset Name: Adult Census Income
 
 Source: OpenML
@@ -28,6 +29,8 @@ Target column: income
 
 Task type: Binary Classification (>50K or <=50K)
 
+---
+
 🛠 Features:
 * Categorical to numerical feature mapping
 
@@ -37,13 +40,15 @@ Task type: Binary Classification (>50K or <=50K)
 
 * Manual mapping for education and sex
 
+---
+
 Two user interfaces:
 
  * Flask Web Interface
    
  * Streamlit UI
 
-
+---
    
 ![image](https://github.com/user-attachments/assets/80d207f7-0388-4119-9630-00c83f60db55)
 
