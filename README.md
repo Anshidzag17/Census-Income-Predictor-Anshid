@@ -11,7 +11,22 @@ Model: A classification model (likely Logistic Regression, Random Forest, etc.) 
 
 Scaler: StandardScaler or similar object saved as scaler.pkl
 
-Target: Predict if income is >50K or <=50K
+Target: Predict  income 
+
+📦 Dataset Information
+
+Dataset Name: Adult Census Income
+
+Source: OpenML
+
+Load using:
+from sklearn.datasets import fetch_openml
+
+data = fetch_openml("adult", version=2, as_frame=True)
+
+Target column: income
+
+Task type: Binary Classification (>50K or <=50K)
 
 🛠 Features:
 * Categorical to numerical feature mapping
